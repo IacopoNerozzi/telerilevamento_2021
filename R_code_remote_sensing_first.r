@@ -120,8 +120,20 @@ pdf("ilmioprimopdfconR.pdf")
 par(mfrow=c(2,2))
 
 plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+
 plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=2, g=3, b=4, stretch="Lin")
 #visualizzo un 2x2 con le immagini a colori reali ed infrarossi
 #funzione pdf aggiunta dopo il grafico 2x2
+
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
+#hist non cambia nulla se minuscolo
+
+#par colori naturali, falsi colori e falsi colori con istogramma strechato
+par(mfrow=c(3,1))
+
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
