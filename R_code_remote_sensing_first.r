@@ -97,5 +97,31 @@ plot(p224r63_2011$B3_sre, col=clr)
 clnir <- colorRampPalette(c("red","orange","yellow")) (100)
 plot(p224r63_2011$B4_sre, col=clnir)
 
+#Day 4
+#ricordiamoci 
 
+#Bande Landset
+#B1: blu
+#B2: verde
+#B3: rosso
+#B4: infrarosso vicino
+#B5: infrarosso medio
+#B6: infrarosso termico
+#B7: infrarosso medio
 
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+#visualizzo su scala di colori reali
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=2, g=3, b=4, stretch="Lin")
+#monto l'infrarosso su componenti diverse, rosso, verde e blu
+
+pdf("ilmioprimopdfconR.pdf")
+par(mfrow=c(2,2))
+
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=2, g=3, b=4, stretch="Lin")
+#visualizzo un 2x2 con le immagini a colori reali ed infrarossi
+#funzione pdf aggiunta dopo il grafico 2x2
