@@ -115,8 +115,9 @@ plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=2, g=3, b=4, stretch="Lin")
 #monto l'infrarosso su componenti diverse, rosso, verde e blu
+#posso ottenere così informazioni diverse, come suggerimenti sulla presenza di torrenti oppure visualizzare suolo nudo
 
-pdf("ilmioprimopdfconR.pdf")
+pdf("il_mio_primo_pdf_con_R.pdf")
 par(mfrow=c(2,2))
 
 plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
@@ -124,16 +125,24 @@ plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
 plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=2, g=3, b=4, stretch="Lin")
-#visualizzo un 2x2 con le immagini a colori reali ed infrarossi
+#visualizzo un multiframe 2x2 con le immagini a colori reali ed infrarossi
 #funzione pdf aggiunta dopo il grafico 2x2
+#lanciando pdf non carico le immagini su R, ma le salvo nel pdf
+#pdf mantiene l'alta risoluzione originale
+
+dev.off()
 
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
 #hist non cambia nulla se minuscolo
+#hist ha una pendenza dei valori medi maggiore
+#hist da un'immagine molto più dettagliata
 
-#par colori naturali, falsi colori e falsi colori con istogramma strechato
+#par crea un multiframe con colori naturali, falsi colori e falsi colori con istogramma strechato
 par(mfrow=c(3,1))
 
 plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
+
+install.packages("RStoolbox")
